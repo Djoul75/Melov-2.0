@@ -6,6 +6,6 @@ class AddColumnsToUsers < ActiveRecord::Migration[7.0]
     add_column :users, :spotify_token, :string
     add_column :users, :token, :string
     add_column :users, :spotify_id, :string
-    add_column :users, :spotify_json, :string
+    add_column :users, :spotify_json, :json
   end
 end

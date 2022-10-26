@@ -28,7 +28,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_26_132016) do
     t.string "spotify_token"
     t.string "token"
     t.string "spotify_id"
-    t.string "spotify_json"
+    t.json "spotify_json"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
