@@ -6,5 +6,7 @@ class User < ApplicationRecord
 
   serialize :spotify_hash, JSON
 
-  has_many :buddies, :playlists, :publications
+  has_many :buddies, dependent: :destroy
+  has_many :publications, dependent: :destroy
+  has_many :playlists, dependent: :destroy
 end
