@@ -5,4 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers: [:spotify]
 
   serialize :spotify_hash, JSON
+
+  has_many :buddies, :playlists, :publications
 end
