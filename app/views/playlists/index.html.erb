@@ -1,1 +1,13 @@
 <h1>Hello from Playlist#index</h1>
+ <%= link_to "Back", :back %>
+
+<% if @playlists.empty? %>
+  <p>Vous n'avez pas importé de playlist pour le moment</p>
+<% else %>
+  <% @playlists.each do |playlist| %>
+    <%= playlist.name %>
+    <% playlist.songs.first(5).each do |song| %>
+      <p><%= song.title %> - <%= song.artist %></p>
+    <% end %>
+  <% end %>
+<% end %>
